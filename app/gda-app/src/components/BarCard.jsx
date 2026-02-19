@@ -1,9 +1,9 @@
 import React from 'react'
 import Rating from './Rating'
 
-export default function BarCard({ bar, rating, onRate }) {
+export default function BarCard({ bar, rating, onRate, onSelect }) {
   return (
-    <div className="bar-card">
+    <div className="bar-card" style={{ cursor: onSelect ? 'pointer' : 'default' }} onClick={onSelect}>
       <div className="bar-info">
         <h2>{bar.name}</h2>
         <div className="meta">{bar.address} • {bar.distance} km</div>
