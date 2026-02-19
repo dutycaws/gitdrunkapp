@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import BarList from './components/BarList'
+import MapEmbed from './components/MapEmbed'
 
 const SAMPLE_BARS = [
   { id: 'b1', name: 'The Tipsy Turtle', address: '123 Main St', distance: 0.4 },
@@ -40,6 +41,8 @@ export default function App() {
         <h1>GitDrunk — Nearby Bars</h1>
         <p>Browse nearby bars and rate them (stored in session storage)</p>
       </header>
+
+      <MapEmbed />
 
       <main>
         <BarList bars={bars} ratings={ratings} onRate={setRating} />
